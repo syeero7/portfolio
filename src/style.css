@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+  --font-display: system-ui, sans-serif;
+  --default-transition-duration: 250ms;
+}
+
+@layer base {
+  button {
+    @apply cursor-pointer;
+  }
+
+  body {
+    @apply scroll-smooth;
+  }
+
+  main {
+    --header-height: 64px;
+    min-height: calc(100vh - var(--header-height));
+  }
+}
