@@ -69,3 +69,25 @@
 .project-link {
   @apply flex items-center gap-3 rounded-full border-2 border-transparent bg-zinc-900 px-3 py-1.5 transition-colors hover:border-zinc-50 active:border-zinc-50;
 }
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded-sm bg-zinc-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-sm border border-zinc-900 bg-zinc-200;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-zinc-50;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--color-zinc-50) var(--color-zinc-900);
+  }
+}
