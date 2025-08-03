@@ -41,8 +41,13 @@ function handleMouseMove(e: MouseEvent) {
   mouseCoords.y = e.clientY;
 }
 
+let timer: undefined | number;
+
 function handleResize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  createParticles(particleCount);
+  if (timer) clearTimeout(timer);
+  timer = setTimeout(() => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    createParticles(particleCount);
+  }, 300);
 }
