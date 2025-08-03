@@ -11,11 +11,41 @@
   }
 
   body {
+    --bg-img: radial-gradient(
+      circle,
+      rgba(24, 24, 27, 1) 0%,
+      rgba(31, 28, 28, 1) 100%
+    );
+    background-image: var(--bg-img);
     @apply scroll-smooth;
   }
 
   main {
     --header-height: 64px;
-    min-height: calc(100vh - var(--header-height));
+    --section-min-h: calc(100vh - var(--header-height));
+    min-height: var(--section-min-h);
   }
+
+  section {
+    @apply mx-auto max-w-5xl;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+
+  @apply absolute size-[1px] overflow-hidden whitespace-nowrap;
+}
+
+.tech-stack li svg {
+  @apply size-5;
+}
+
+.tech-stack li span {
+  @apply text-sm;
 }
