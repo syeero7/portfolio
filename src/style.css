@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: system-ui, sans-serif;
   --default-transition-duration: 250ms;
 }
 
@@ -17,7 +16,7 @@
       rgba(31, 28, 28, 1) 100%
     );
     background-image: var(--bg-img);
-    @apply scroll-smooth;
+    @apply scroll-smooth font-sans;
   }
 
   main {
