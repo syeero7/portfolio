@@ -14,7 +14,7 @@ export function getAll() {
 }
 
 function urlDevIcons(path: string) {
-  const base = "httpsx://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons"
+  const base = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons"
   return `${base}/${path}.svg`
 }
 
