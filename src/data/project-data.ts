@@ -29,7 +29,7 @@ projects.push({
   source: "https://github.com/syeero7/filecrow",
   image: "/project-filecrow.webp",
   description: "A peer-to-peer file server for sharing files over the local network.",
-  languages: ["Go", "TypeScript", "HTML", "CSS"],
+  languages: ["Go", "Svelte", "TypeScript", "CSS"],
 })
 projects.push({
   title: "Deliverer",
